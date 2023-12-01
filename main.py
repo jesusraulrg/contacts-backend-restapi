@@ -29,6 +29,10 @@ class Contacto(BaseModel):
     telefono: str
 
 
+@app.get("/")
+async def root():
+    return {"message": "/contactos para obtener todos los contactos"}
+
 @app.get("/contactos")
 async def obtener_contactos():
     c = conn.cursor()
