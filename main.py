@@ -17,11 +17,7 @@ app = FastAPI()
 security = HTTPBearer()
 security_basic = HTTPBasic()
 
-origins = [
-    "http://127.0.0.1:5000",
-    "https://contacts-frontend-be92669e2c94.herokuapp.com",
-    "https://jesusraul.com",
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
